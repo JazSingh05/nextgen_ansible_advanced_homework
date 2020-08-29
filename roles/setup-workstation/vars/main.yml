@@ -1,2 +1,28 @@
 ---
 # vars file for setup-workstation
+osp_networks:
+  # Public   
+  external:
+    cloud_name: ospcloud
+    network_name: ext_network
+    subnet_name: ext_subnet
+    cidr_network: "192.0.2.0/24"
+    state: present
+    external: true
+
+  # Private   
+  internal:
+    cloud_name: ospcloud
+    network_name: int_network
+    subnet_name: int_subnet
+    cidr_network: "172.16.0.0/24"
+    state: present
+    external: false
+
+  # the two networks
+osp_router:
+  router:
+    cloud_name: ospcloud
+    state: present
+    name: router
+    network: ext_network

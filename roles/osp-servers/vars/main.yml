@@ -37,3 +37,10 @@ osp_servers:
     security_group: db
     meta:
       - { group: appdbs, deployment_name: QA}
+osp_network:
+  internal:
+    name: int_network
+    cidr: 172.16.0.0/24
+  external:
+    name: ext_network
+    cidr: 192.0.2.0/24
