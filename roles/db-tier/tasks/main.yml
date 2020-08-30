@@ -1,13 +1,13 @@
-- name: install postgres
+- name: install postgres to instance
   yum:
     name: postgresql-server
     state: latest
 
-- name: initilize postgres db if db is not initialized
+- name: initilize postgres db if not already
   shell: postgresql-setup initdb
   when: check_db_output.rc != 0
 
-- name: enable postgres at boot
+- name: enable postgres 
   service:
     name: postgresql
     enabled: yes
