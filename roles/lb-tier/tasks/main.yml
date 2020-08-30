@@ -1,16 +1,16 @@
 ---
 # tasks file for lb-tier
-- name: install packages
+- name: install packages needed
   yum:
     name: haproxy
     state: latest
-- name: enable HAProxy
+- name: enable HAProxy for use
   service:
     name: haproxy
     state: started
     enabled: yes
-- name: configure haproxy
+- name: configure HAproxy
   template:
     src: haproxy.cfg.j2
-    dest: "{{ haproxy_cfg }}"
+    dest: /etc/haproxy/haproxy.cfg
   notify: restart HAproxy

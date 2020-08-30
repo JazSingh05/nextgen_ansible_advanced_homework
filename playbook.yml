@@ -8,9 +8,9 @@
       # - base-config
       # - config-tower
       # - db-tier
-      - lb-tier
+      # - lb-tier
       # - osp-facts
-      # - osp-instance-delete
+      - osp-instance-delete
       # - osp-servers
       # - osp-setup
       # - setup-workstation
