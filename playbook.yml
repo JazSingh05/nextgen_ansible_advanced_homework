@@ -1,0 +1,16 @@
+ 
+---
+ 
+- hosts: localhost
+  become: yes
+  roles:
+      # - app-tier
+      # - base-config
+      # - config-tower
+      - db-tier
+      # - lb-tier
+      # - osp-facts
+      # - osp-instance-delete
+      # - osp-servers
+      # - osp-setup
+      # - setup-workstation
